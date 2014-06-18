@@ -145,6 +145,7 @@ class WC_Google_Analytics extends WC_Integration {
 
 			ga('create', '" . esc_js( $tracking_id ) . "', '" . $set_domain_name . "');
 			ga('set', 'dimension1', '" . $loggedin . "');
+			ga('require', 'displayfeatures');
 			ga('send', 'pageview');
 
 			</script>";
@@ -230,8 +231,9 @@ class WC_Google_Analytics extends WC_Integration {
 
 			ga('create', '" . esc_js( $tracking_id ) . "', '" . $set_domain_name . "');
 			ga('set', 'dimension1', '" . $loggedin . "');
+			
 			ga('send', 'pageview');
-
+			ga('require', 'displayfeatures');
 			ga('require', 'ecommerce', 'ecommerce.js');
 
 			ga('ecommerce:addTransaction', {
